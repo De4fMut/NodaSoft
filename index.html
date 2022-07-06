@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>nodasoft task</title>
-  </head>
-  <body>
-    <div class="wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>nodasoft task</title>
+</head>
+
+<body>
+  <div class="wrapper">
     <header class="header">
       <div class="pop-up">
-        <input id="check-btn" type="checkbox">
-        <div class="pop-up__btn"><label for="check-btn" class="pop-up__btn-text">Open pop-up button
-        </label></div>
-        <div class="pop-up__window">
-          <h1 class="pop-up__window-text">Pop-up</h2>
+        <div class="pop-up__btn">
+          <p>Open pop-up button</p>
+          <input id="check-btn" type="radio" name="pop-up">
+          <input id="cross-btn" type="radio" name="pop-up">
+          <input id="check-btn__close" type="radio" name="pop-up">
+          <div class="pop-up__window">
+            <h1 class="pop-up__window-text">Pop-up</h2>
+            </div>
         </div>
       </div>
     </header>
@@ -35,6 +40,7 @@
       </div>
     </main>
     <footer class="footer"></footer>
-</div>
-  </body>
+  </div>
+</body>
+
 </html>
