@@ -14,6 +14,21 @@
   min-height: 10%;
   margin: 0 0 15px 0;
   .pop-up {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    padding: 20px 17px;
+    @media screen and (max-width:1023px) {
+      padding: 15px 17px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 13px;
+    }
+    @media screen and (max-width: 430px) {
+      padding: 8px;
+    }
     .pop-up__window {
       position: absolute;
       display: none;
@@ -30,6 +45,10 @@
       font-weight: 400;
       font-size: 53px;
       line-height: 62px;
+      @media screen and (max-width: 480px) {
+        height: 85vw;
+        width: 85vw;
+      }
       .pop-up__window-text {
         position: absolute;
         top: 50%;
@@ -37,33 +56,31 @@
         margin-right: -50%;
         transform: translate(-50%, -50%);
       }
-      &::after {
-        content: "X";
-        position: absolute;
-        font-size: 20px;
-        line-height: 23px;
-        color: #fff;
+      .cross-btn {
+        position: relative;
         width: 43px;
         height: 39px;
-        background: #7faff6;
-        border-radius: 5px;
-        padding: 8px 15px;
-        left: 342px;
-        top: 15px;
+        &::after {
+          content: "X";
+          position: absolute;
+          font-size: 20px;
+          line-height: 23px;
+          color: #fff;
+          width: 43px;
+          height: 39px;
+          background: #7faff6;
+          border-radius: 5px;
+          padding: 8px 15px;
+          cursor: pointer;
+        }
       }
-      /*.pop-up__window-text{
-        margin: auto;
-      }*/
     }
     .pop-up__btn {
-      position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 206px;
       height: 39px;
-      left: 30px;
-      top: 30.5px;
       background: #a5c7f9;
       border-radius: 5px;
       font-weight: 400;
@@ -71,22 +88,25 @@
       line-height: 23px;
       color: #ffffff;
       font-family: sans-serif;
-      .pop-up__btn-text {
-        
-      }
+      cursor: pointer;
     }
     #check-btn {
       display: none;
     }
     #check-btn:checked ~ .pop-up__window {
-      display: block;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 5px;
+      @media screen and (max-width: 480px) {
+        padding: 1vw;
+      }
     }
   }
 }
 
 .main {
   flex: 0 1 80vh;
-  //background-color: #fff;
   margin: 0 0 15px 0;
   display: flex;
   flex-direction: column;

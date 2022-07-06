@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   min-height: 100%;
   padding: 0 1%;
-  background-color: rgb(192, 219, 217);
+  background-color: #c0dbd9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,12 +91,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  background-color: rgb(127, 175, 246);
+  background-color: #7faff6;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10vh;
           flex: 0 0 10vh;
   min-height: 10%;
   margin: 0 0 15px 0;
+}
+.header .pop-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 20px 17px;
+}
+@media screen and (max-width: 1023px) {
+  .header .pop-up {
+    padding: 15px 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .pop-up {
+    padding: 13px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .header .pop-up {
+    padding: 8px;
+  }
 }
 .header .pop-up .pop-up__window {
   position: absolute;
@@ -115,9 +144,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-size: 53px;
   line-height: 62px;
-  /*.pop-up__window-text{
-    margin: auto;
-  }*/
+}
+@media screen and (max-width: 480px) {
+  .header .pop-up .pop-up__window {
+    height: 85vw;
+    width: 85vw;
+  }
 }
 .header .pop-up .pop-up__window .pop-up__window-text {
   position: absolute;
@@ -127,7 +159,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.header .pop-up .pop-up__window::after {
+.header .pop-up .pop-up__window .cross-btn {
+  position: relative;
+  width: 43px;
+  height: 39px;
+}
+.header .pop-up .pop-up__window .cross-btn::after {
   content: "X";
   position: absolute;
   font-size: 20px;
@@ -138,11 +175,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #7faff6;
   border-radius: 5px;
   padding: 8px 15px;
-  left: 342px;
-  top: 15px;
+  cursor: pointer;
 }
 .header .pop-up .pop-up__btn {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,8 +189,6 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
   width: 206px;
   height: 39px;
-  left: 30px;
-  top: 30.5px;
   background: #a5c7f9;
   border-radius: 5px;
   font-weight: 400;
@@ -163,12 +196,27 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 23px;
   color: #ffffff;
   font-family: sans-serif;
+  cursor: pointer;
 }
 .header .pop-up #check-btn {
   display: none;
 }
 .header .pop-up #check-btn:checked ~ .pop-up__window {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px;
+}
+@media screen and (max-width: 480px) {
+  .header .pop-up #check-btn:checked ~ .pop-up__window {
+    padding: 1vw;
+  }
 }
 
 .main {
@@ -192,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .main .block1 {
-  background-color: rgb(179, 249, 90);
+  background-color: #b3f95a;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 28.5vw;
           flex: 0 0 28.5vw;
@@ -223,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .main .block1 .block1__content {
-  background-color: rgb(138, 209, 145);
+  background-color: #8ad191;
   height: 48%;
 }
 @media screen and (max-width: 767px) {
@@ -349,14 +397,14 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: rgb(136, 181, 191);
+  background-color: #88b5bf;
   padding: 2.5vw;
 }
 .main .block2 .block2__content {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 23%;
           flex: 0 1 23%;
-  background-color: rgb(13, 137, 176);
+  background-color: #0d89b0;
   width: 18vw;
   height: 15vw;
 }
@@ -365,5 +413,5 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 10vh;
           flex: 0 0 10vh;
-  background-color: rgb(127, 175, 246);
+  background-color: #7faff6;
 }
